@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+        }
+
+        .wrapper {
+            background-color: gray;
+            padding: 3px;
+            text-align: center;
+            color: white;
+            width: fit-content;
+        }
+
+        p {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #canvasImg {
+            border: 1px solid black;
+            width: 500px;
+            height: 350px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <canvas id="canvasImg"></canvas>
+        <p> Canvas 👻 : Insert me an image please! </p>
+        <input type="file" name="uploadImg" id="uploadImg">
+    </div>
+    <script>
+        var canvas = document.getElementById('canvasImg');
+        var ctx = canvas.getContext('2d');
+        var imageLoader = document.getElementById('uploadImg');
+        imageLoader.addEventListener('change', handleImage, false);
+
+
+        function handleImage(uploadImgFile){
+        var reader = new FileReader();
+        reader.onload = function(event){
+        var img = new Image();
+        img.onload = function(){
+        canvas.width =   img.width;
+        canvas.height = img.height;
+        ctx.drawImage(img,0,0);
+        }
+        img.src = event.target.result;
+        }
+        reader.readAsDataURL(uploadImgFile.target.files[0]);     
+        }
+    </script>
+</body>
+
+</html>
