@@ -1,0 +1,174 @@
+@font-face {
+  font-family: 'Oswald';
+  src: url('../fonts/Oswald-VariableFont_wght.ttf');
+}
+@import url(https://fonts.googleapis.com/css?family=Raleway&display=swap);
+
+.container .menu{
+  width: 60%;
+  height: 50px;
+  margin-top: 10%;
+  position: relative;
+  display: flex;
+  margin-left: 30%;
+  padding: 15px;
+  color: grey;
+}
+.menu>div{
+  height: 50px;
+  width: 10%;
+}
+.menu .all{
+  height: 50px;
+  width: 10%;
+}
+.right_container{
+  width: 75%; 
+  height: 100vh;
+  margin-left: 1%;
+  position: relative;
+}
+
+.porfolio{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+}
+
+.menu-title {
+  margin: 0 0 0 -80px;
+  padding: 10px 20px 10px 90px;
+  background-color: #ffcd38;
+}
+
+.porfolio div img{
+  width: 200px;
+  height: 200px;
+  margin-top: 20px;
+  border: 1px solid black;
+}
+
+.blog{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+}
+
+.blog .frog{
+  border: 1px solid  black;
+  
+  position: relative;
+  padding-bottom: 30px;
+  margin: 20px;
+}
+.blog .frog img{
+  width: 500px;
+  height: 300px;
+}
+.frog h4{
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: #ffcd38;
+  color: rgb(227, 246, 255);
+  padding-top: 10px;
+  margin-top: -30px;
+  right: 30px;
+
+}
+
+@media (max-width:768px){
+  .porfolio{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+
+  }
+  .porfolio div img{
+      width: 140px;
+      height: 140px;
+      margin-top: 20px;
+      border: 1px solid black;
+  }
+  .blog{
+      display: grid;
+      grid-template-columns: 1fr;
+      text-align: center;
+  }
+  .blog .frog img{
+      width: 400px;
+      height: 250px;
+  }
+
+
+}
+@media (max-width:768px) and (min-width:426px){
+  .porfolio{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+  }
+  .porfolio div img{
+      width: 170px;
+      height: 170px;
+      margin-top: 20px;
+      border: 1px solid black;
+  }
+  .left_container{
+      width: 25%;
+  }
+  .profile img{
+      width: 80px;
+  }
+  .navbar ul li a{
+      font-size: 1.2rem;
+        
+    }
+
+}
+@media (max-width:426px){
+  .porfolio{
+      display: grid;
+      grid-template-columns: 1fr;
+
+  }
+  .porfolio div img{
+      width: 250px;
+      height: 250px;
+      margin-top: 20px;
+      border: 1px solid black;
+  }
+  .profile img{
+      width: 50px;
+  }
+  .profile h2{
+
+      font-size: 20px;
+  }
+  .navbar ul li a{
+    font-size: .8rem;
+      
+  }
+  .blog{
+      display: grid;
+      grid-template-columns: 1fr;
+      text-align: center;
+  }
+  .blog .frog img{
+      width: 280px;
+      height: 150px;
+  }
+  .frog h4{
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background-color: #ffcd38;
+      color: rgb(227, 246, 255);
+      font-size: .7rem;
+      margin-top: -35px;
+     
+  
+  }
+
+}
+
+
